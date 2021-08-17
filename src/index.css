@@ -1,13 +1,165 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.App{
+  height: 100vh;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 16px;
 }
+
+/* header */
+header{
+  width: 100%;
+  height: 250px;
+  color:hsl(236, 33%, 92%);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-container{
+  width:50%;
+  margin: 0 auto;
+}
+
+header>img{
+  width: 100%;
+}
+
+header .header-container .title{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+header .header-container .title h1{
+  font-size: 38px;
+  letter-spacing: 10px;
+}
+
+header .header-container .title>button{
+  background-color: transparent;
+  border:none;
+}
+
+
+header .header-container input{
+  width: 100%;
+  height: 50px;
+  font-size: 16px;
+  border: none;
+  padding: 0 30px;
+  border-radius: 5px;
+}
+
+/* main */
+main{
+  background: hsl(235, 21%, 11%);
+  height: calc(100% - 250px) ;
+}
+
+main .main-container{
+  width:50%;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+}
+
+main .main-container p{
+  font-size: 14px;
+}
+
+main .main-container .all-items{
+  border-radius: 5px;
+  overflow: hidden;
+  position: absolute;
+  top: -40px;
+  width: 100%;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  position: relative;
+}
+
+
+main .main-container .all-items .item{
+  width: 100%;
+  height: 50px;
+  list-style: none;
+  border-bottom: 1px solid;
+  padding: 0 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.completed{
+  opacity: 0.5;
+  text-decoration: line-through;
+}
+
+main .main-container .all-items .item:hover{
+  color: hsl(236, 33%, 92%);
+}
+
+main .main-container .all-items .item:hover .item-buttons button{
+  display: inline-block;
+}
+
+main .main-container .all-items .item .item-buttons button{
+  border: none;
+  background: transparent;
+  font-size: 18px;
+  cursor: pointer;
+  margin-left: 20px;
+  width:25px;
+  height: 25px;
+  display: none;
+}
+
+main .main-container .all-items .item .item-buttons .check-item{
+  background-image: linear-gradient(rgb(87, 221, 255), rgb(192, 88, 243));
+  border-radius: 50%;
+}
+
+main .main-container .all-items .item .item-buttons button img{
+  width: 15px;
+  
+}
+
+main .main-container .all-items .navbar{
+  padding: 0 30px ;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  position: relative;
+}
+main .main-container .all-items .navbar>.navbar-item{
+  width: 25%;
+}
+
+main .main-container .all-items .navbar form{
+  text-align: center;
+}
+
+main .main-container .all-items .navbar form>input{
+  display: none;
+}
+
+main .main-container .all-items .navbar form>label{
+  margin: 0 10px;
+}
+
+main .main-container .all-items .navbar form>label:hover{
+  color:hsl(220, 98%, 61%);
+  font-weight: 500;
+  cursor: pointer;
+}
+
